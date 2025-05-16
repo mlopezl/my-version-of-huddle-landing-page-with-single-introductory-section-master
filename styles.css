@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Violet);
+    font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(/images/bg-desktop.svg);
+    background-position: left;
+    background-size: 75%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.logo__container{
+    width: 75%;
+    margin: 0 auto;
+    height: 20%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 10px;
+}
+
+.logo__image{
+    width: 180px;
+}
+
+.hero{
+    display: flex;
+    height: 65%;
+    width: 75%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.hero__image__container{
+    width: 60%;
+    height: 100%;
+}
+
+.hero__image{
+    max-width: 550px;
+    margin-top: 20px;
+}
+
+.hero__info__container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 60px;
+    gap: 20px;
+}
+
+.hero__title{
+    font-size: 2rem;
+    color: var(--White);
+    font-weight: bold;
+}
+
+.hero__description{
+    font-size: 0.9rem;
+    color:var(--White);
+    font-weight: 400;
+}
+
+.hero__button{
+    width: 160px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--White);
+    color: var(--Violet);
+    cursor: pointer;
+}
+
+.hero__button:hover{
+    background-color: var(--Soft-Magenta);
+    color: var(--White);
+}
+
+.social__media{
+    width: 75%;
+    margin: 0 auto;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    color: var(--White);
+}
+
+.fa-brands{
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.icon__container{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--White);
+}
+
+.icon__container:hover{
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+
+@media(max-width: 1207px){
+    .container{
+        height: auto;
+        background-size: 200%;
+    }
+    .hero__image{
+        width: 400px;
+    }
+    .hero__info__container{
+        padding-top: 0px;
+    }
+    .social__media{
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 912px){
+    .logo__container{
+        width: 320px;
+        padding-left: 15px;
+        padding-bottom: 0px;
+    }
+
+    .logo__image{
+        width: 140px;
+    }
+
+    .hero__image{
+        width: 300px;
+    }
+
+    .hero{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__image__container{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__info__container{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero__title{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        background-image: url(./images/bg-mobile.svg);
+        background-position: top;
+        background-size: 100%;
+    }
+
+    .hero__image{
+        width: 280px;
+    }
+}
